@@ -1,0 +1,130 @@
+/* Global Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f6f8fb;
+  margin: 0;
+  padding: 0;
+  color: #222;
+}
+
+/* Login container*/
+.loign-container {
+  max-width: 900px;
+  margin: 50px auto;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  text-align: center;
+}
+.login-form {
+    margin-top:50px;
+    text-align:center;
+}
+.login-form input {
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+.login-form button {
+    width: 54%;
+    padding: 10px;
+    background-color: #2b4eff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+  max-width: 900px;
+  margin: 50px auto;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  color: #2b4eff;
+  margin-bottom: 8px;
+}
+
+header p {
+  color: #555;
+}
+
+/* Button Group */
+.btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  background-color: #2b4eff;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #1d34c4;
+}
+
+.btn.secondary {
+  background-color: #777;
+}
+
+.btn.secondary:hover {
+  background-color: #555;
+}
+
+.btn.danger {
+  background-color: #ff4d4d;
+}
+
+.btn.danger:hover {
+  background-color: #d93636;
+}
+
+/* Table Styles */
+#votes-section {
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #2b4eff;
+  color: white;
+}
+
+tr:hover {
+  background-color: #f2f4f8;
+}

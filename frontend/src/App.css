@@ -1,0 +1,8 @@
+.app-container {
+  max-width: 900;
+  margin: '24px auto'; 
+  color: white;
+}
+h1, p {
+  text-align: center;
+}

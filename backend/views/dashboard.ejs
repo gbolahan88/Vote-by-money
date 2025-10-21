@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+
+  <body>
+    <div class="dashboard-container">
+      <header>
+        <h1>Admin Dashboard</h1>
+        <p>Welcome, Admin! Manage your votes here.</p>
+      </header>
+
+      <main>
+        <div class="btn-group">
+          <a href="/admin/votes" class="btn">📊 View Votes</a>
+          <form action="/admin/reset" method="POST">
+            <button type="submit" class="btn danger">♻ Reset Votes</button>
+          </form>
+          <a href="/admin/export" class="btn">📁 Export Votes</a>
+          <a href="/" class="btn secondary">🚪 Logout</a>
+        </div>
+
+        <section id="votes-section">
+          <h2>Current Votes</h2>
+          <table id="votes-table">
+            <thead>
+              <tr>
+                <th>Candidate</th>
+                <th>Votes</th>
+              </tr>
+            </thead>
+            <tbody id="votes-body">
+              <!-- votes will load here -->
+            </tbody>
+          </table>
+        </section>
+      </main>
+    </div>
+
+    <script>
+      async function loadVotes() {
+        try {
+          const res = await fetch('/admin/votes');
+          const data = await res.json();
+          const tbody = document.getElementById('votes-body');
+          tbody.innerHTML = '';
+
+          data.forEach(vote => {
+            const row = document.createElement('tr');
+            row.innerHTML = `<td>${vote.name}</td><td>${vote.votes}</td>`;
+            tbody.appendChild(row);
+          });
+        } catch (err) {
+          console.error('Error loading votes:', err);
+        }
+      }
+
+      loadVotes();
+      setInterval(loadVotes, 5000); // auto-refresh votes every 5 seconds
+    </script>
+  </body>
+</html>
